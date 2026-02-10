@@ -45,8 +45,9 @@ public class HibernateConfig {
         props.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
         props.put("hibernate.hbm2ddl.auto", "update");
         props.put("hibernate.show_sql", "true");
+        
         props.put("hibernate.current_session_context_class",
-                "org.springframework.orm.hibernate5.SpringSessionContext");
+                "org.springframework.orm.hibernate6.SpringSessionContext");
 
         factory.setHibernateProperties(props);
         return factory;

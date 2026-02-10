@@ -24,4 +24,7 @@ public class ProductService {
     public Product getProductById(int id) {
         return productDAO.getById(id);
     }
+    public void updateProduct(Product product) {
+        productDAO.update(product);
+    }
 }

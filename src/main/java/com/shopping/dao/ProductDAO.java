@@ -27,4 +27,7 @@ public class ProductDAO {
     public Product getById(int id) {
     	return sessionFactory.getCurrentSession().get(Product.class, id);
     }
+    public void update(Product product) {
+        sessionFactory.getCurrentSession().merge(product);
+    }
 }

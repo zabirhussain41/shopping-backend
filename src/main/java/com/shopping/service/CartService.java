@@ -18,6 +18,7 @@ public class CartService {
 
 
     public void addToCart(int userId, int productId, int qty) {
+    	
         Cart cart = cartDAO.getCartByUserId(userId);
         cartDAO.addItem(cart, productId, qty);
     }

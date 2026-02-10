@@ -3,6 +3,7 @@ package com.shopping.model;
 import jakarta.persistence.*;
 
 
+
 @Entity
 @Table(name = "products")
 public class Product {

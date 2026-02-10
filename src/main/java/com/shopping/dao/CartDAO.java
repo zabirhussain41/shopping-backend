@@ -3,7 +3,6 @@ package com.shopping.dao;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import com.shopping.model.Cart;
 import com.shopping.model.CartItem;
 import com.shopping.model.Product;
@@ -55,6 +54,12 @@ public class CartDAO {
                 .createQuery("from CartItem where cart.id = :cid", CartItem.class)
                 .setParameter("cid", cartId)
                 .list();
+    }
+    public void clearCart(int cartId) {
+        sessionFactory.getCurrentSession()
+            .createQuery("delete from CartItem where cart.id = :cid")
+            .setParameter("cid", cartId)
+            .executeUpdate();
     }
 
 
