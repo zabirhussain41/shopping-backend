@@ -31,5 +31,4 @@ cd ecommerce-backend-springboot
 mvn spring-boot:run
 ```
 
-## Live API
-https://your-app.railway.app  ← add after deploy
+
